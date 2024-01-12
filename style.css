@@ -1,0 +1,105 @@
+:root{
+    --body-bg-color: #e0e5ec;
+    --bg-color: #e0e5ec;
+    --primary-font-color: rgba(144, 152, 168, 1);
+    --soft-high-light: rgba(255, 255, 255, 0.43);
+    --dark-high-light: rgba(217, 218, 200, 0.51);
+
+}
+
+[data-theme="dark"]{
+    --bg-color: #131419;
+    --primary-font-color: #c7c7c7;
+    --secondary-font-color: #03a9f4;
+    --soft-high-light: rgba(255, 255, 255, 0.05);
+    --dark-high-light: rgba(0, 0, 0, 0.51);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--body-bg-color);
+    color: var(--primary-font-color);
+}
+
+.calculator{
+    background: var(--bg-color);
+    color: var(--primary-font-color);
+}
+
+.display{
+    box-shadow: 6px 6px 16px 0 var(--dark-high-light), 
+    -6px -6px 16px 0 var(--soft-high-light),
+    inset 6px 6px 5px 0 var(--dark-high-light),
+    inset -6px -6px 5px 0 var(--soft-high-light);
+    border: 5px solid var(--soft-high-light);
+    color: var(--secondary-font-color);
+}
+
+.neumorphic{
+    box-shadow: 6px 6px 16px 0 var(--dark-high-light), 
+    -6px -6px 16px 0 var(--soft-high-light);
+    border-radius: 50%;
+    transition: 0.1s all ease-in-out;
+    border: 1px solid var(--soft-high-light);   
+}
+
+.neumorphic:hover{
+    box-shadow: inset 6px 6px 5px 0 var(--dark-high-light),
+    inset -6px -6px 5px 0 var(--soft-high-light);
+    color: var(--secondary-font-color);
+}
+
+body{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: "Odibee Sans";
+    font-size: 16px;
+}
+
+.display{
+    border-radius: 12px;
+    transition: 0.1s all ease-in-out;
+    height: 60px;
+    line-height: 60px;
+    text-align: right;
+    width: 100%;
+    font-size: 32px;
+    letter-spacing: 4px;
+
+}
+
+.calculator{
+    display: grid;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    border-radius: 20px;
+    padding: 50px 40px 40px 40px;
+}
+
+.zero{
+    width: 100%;
+    border-radius: 12px;
+}
+
+.toggle{
+    grid-area: toggle;
+}
+
+.display{
+    grid-area: display;
+}
+
+.c{
+    grid-area: c;
+}
+
+
